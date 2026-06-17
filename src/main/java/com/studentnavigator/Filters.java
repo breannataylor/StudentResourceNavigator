@@ -75,7 +75,13 @@ public class Filters extends UserInput {
 
     //filter by building
     public static List<Resource> filterByBuilding() throws IOException {
-        IO.println("Enter a building number:");
+            //list of categories in JSON
+        List<Integer> categories = List.of(4, 5, 10, 16);
+        
+        IO.println("Select a building number\n");
+        for (int i : categories) {
+            IO.println((i));
+        }
 
         int building = getInt(); 
 
@@ -210,16 +216,12 @@ public class Filters extends UserInput {
             IO.println("Would you like to add resource to your list? Y or N ");
             String answer = getString();
             switch (answer) {
-                case "y":
-                    StudentList.addResource(r);
-                    break;
-                case "n":
+                case "y" -> StudentList.addResource(r);
+                case "n" -> {
                     IO.print("Press Enter to view next resource:");
                     getString();
-                    break;
-                default:
-                    IO.println("Invalid response. Please select Y or N");
-                    break;
+                }
+                default -> IO.println("Invalid response. Please select Y or N");
             }
         }
     

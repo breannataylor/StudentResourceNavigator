@@ -29,6 +29,7 @@ public class Welcome extends UserInput {
             IO.println("2 - Filter by Category");
             IO.println("3 - Filter by Building");
             IO.println("4 - Filter by Name");
+            IO.println("0 - Exit");
 
             int choice = getInt(); // Read user selection
 
