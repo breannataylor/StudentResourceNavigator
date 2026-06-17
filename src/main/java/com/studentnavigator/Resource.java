@@ -46,7 +46,7 @@ public class Resource {
         String line = "";
 
         for (String word : words) {
-            // If adding this word exceeds width, push the line to result
+            // If adding this word exceeds, push the line to result
             if ((line + word).length() > width) {
                 result += line + "\n";
                 line = "";

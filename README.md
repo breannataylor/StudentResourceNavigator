@@ -20,7 +20,10 @@ Students can also build a **custom list of resources**. This list can be viewed,
 - Clean, readable formatting for all resource details
 - Multi‑category support for more accurate filtering
 - Fully interactive console menu
-
+---
+## To Run
+- In terminal, enter StudentSchoolNavigator folder
+- run `mvn clean compile exec:java`
 ---
 
 ## JSON Data Structure
@@ -68,6 +71,10 @@ Each resource in the JSON file follows this structure:
 - Small typos or mismatched category names in the JSON caused filtering to fail in ways that weren’t obvious. I standardized the data and updated the filtering logic to support multi‑category resources.
 
 ---
+### Future Endeavors
+- Adding more resources
+- Printing saved resource list directly from program instead of saving it as a text file
+- Allowing users to add resouces directly from Resource list instead of from filtered list
 
 ### Works Cited: 
 https://www.geeksforgeeks.org/java/filewriter-class-in-java/
