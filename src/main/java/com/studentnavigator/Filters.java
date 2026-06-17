@@ -8,11 +8,10 @@ public class Filters extends UserInput {
 
     //view all resources
     public static void viewAllResources() throws IOException{
-        List<Resource> fullList = ResourceRepository.getAllResources();
+        List<Resource> results = ResourceRepository.getAllResources();
         
-        for (Resource r : fullList) {
-            IO.println(r.toString() + "\n\n");
-        }
+        resourceLoop(results);
+        postFilterMenu(results);
     }
     //search by category
     public static List<Resource> filterByCategory() throws IOException {
@@ -37,9 +36,12 @@ public class Filters extends UserInput {
             num++;
         }
 
+        //converts String to Integer
         int choice = Integer.parseInt(getString());
+        //if the choice is negative or larger than the category list, invalidate choice
         if (choice < 1 || choice > categories.size()) {
             IO.println("Invalid choice.");
+            //since user input is invalid, there are not results to return (empty array)
             return new ArrayList<>();
         }
         //retrieves index of category in array
@@ -56,7 +58,6 @@ public class Filters extends UserInput {
                 //loop through categories, if chosen category is there, add to results
                 for (String c : resourceCategories) {
                     if (c.equalsIgnoreCase(categoryInput)) {
-                        IO.println(r);
                         results.add(r);
                         break; // stop checking this resource once matched
                     }
@@ -67,7 +68,7 @@ public class Filters extends UserInput {
         if (results.isEmpty()) {
             IO.println("No resources found for category: " + categoryInput);
         }
-
+        resourceLoop(results);
         postFilterMenu(results);
         return results;
     }
@@ -83,7 +84,6 @@ public class Filters extends UserInput {
 
         for (Resource r : fullList) {
             if (r.getBuilding() == building) {
-                IO.println(r);
                 results.add(r);
             }
         }
@@ -91,7 +91,7 @@ public class Filters extends UserInput {
         if (results.isEmpty()) {
             IO.println("No resources found in building: " + building);
         }
-
+        resourceLoop(results);
         postFilterMenu(results);
 
         return results;
@@ -106,7 +106,6 @@ public class Filters extends UserInput {
 
         for (Resource r : fullList) {
             if (r.getName().toLowerCase().contains(name)) {
-                IO.println(r);
                 results.add(r);
             }
         }
@@ -114,7 +113,7 @@ public class Filters extends UserInput {
         if (results.isEmpty()) {
             IO.println("No resources found with name containing: " + name);
         }
-
+        resourceLoop(results);
         postFilterMenu(results);
         return results;
     }
@@ -130,6 +129,7 @@ public class Filters extends UserInput {
             IO.println("2 - Remove a resource from my list");
             IO.println("3 - View my resource list");
             IO.println("4 - Save list to a text file");
+            IO.println("5 - View results again");
             IO.println("0 - Return to the main menu\n");
 
             IO.print("Enter choice: ");  
@@ -188,12 +188,41 @@ public class Filters extends UserInput {
                     break;
                 }
 
+                case 5 -> {
+                    for (Resource r : results) {
+                    IO.println(r.toString() + "\n\n");
+                    IO.print("Press Enter to view next resource:");
+                    getString();
+                    }
+                }
                 case 0 -> running = false;
 
                 default -> IO.println("Invalid choice.");
 
             }
         }
+    }
+
+    //helper method 
+    private static void resourceLoop(List<Resource> results){
+        for (Resource r : results) {
+            IO.println(r.toString() + "\n\n");
+            IO.println("Would you like to add resource to your list? Y or N ");
+            String answer = getString();
+            switch (answer) {
+                case "y":
+                    StudentList.addResource(r);
+                    break;
+                case "n":
+                    IO.print("Press Enter to view next resource:");
+                    getString();
+                    break;
+                default:
+                    IO.println("Invalid response. Please select Y or N");
+                    break;
+            }
+        }
+    
     }
 }
 

@@ -26,7 +26,7 @@ public class StudentList{
         while (iterator.hasNext()) {
             Resource r1 = iterator.next();
 
-            if (r1.getName().equalsIgnoreCase(name)) {
+            if (r1.getName().toLowerCase().contains(name.toLowerCase())) {
                 iterator.remove();
                 IO.println("Removed: " + r1.getName());
                 return true;
@@ -42,7 +42,7 @@ public class StudentList{
             return;
         }
 
-        IO.println("\n=== Your Saved Resources ===");
+        IO.println("\n\n=== Your Saved Resources ===");
         for (Resource r : studentResources) {
             IO.println(r);
         }
@@ -54,14 +54,20 @@ public class StudentList{
             IO.println("Your student list is empty.");
             return;
         }
+        //checks if there is a home folder
+        String home = System.getProperty("user.home");
+        File dir = new File(home + "/Documents");
 
-        File SAVED_FILE = new File("MySavedResources.txt");
+        if (!dir.exists()) { //if there isn't a documents folder, make one
+            dir.mkdirs();
+        }
 
+        File SAVED_FILE = new File(dir, "MySavedResources.txt");
         //create new file if not already made
         if (SAVED_FILE.createNewFile()) {
-                System.out.println("File created: " + SAVED_FILE.getName());
+                System.out.println("File created in 'Documents' folder: " + SAVED_FILE.getName());
             } else {
-                System.out.println("File already exists.");
+                System.out.println("Editing current resource file.");
             }
 
         //try with resources - automatically closes resource after try block completes
