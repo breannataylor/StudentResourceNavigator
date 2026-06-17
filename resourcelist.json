@@ -1,0 +1,102 @@
+[
+    {
+        "name": "Sheryl McKinley Food Pantry",
+        "building": 10,
+        "room": "Bremer Student Center",
+        "phone": "360-475-7367",
+        "hours": "M–W: 12pm - 3pm; Tu-Th: 11am - 1pm; Fri: Closed",
+        "email": "sgoc@olympic.edu",
+        "category": ["Food"],
+        "description": "The Sheryl McKinley Food Pantry strives to provide nutritional food resources, hygiene products and other resources to the students of Olympic College. The food pantry is open year-round and available at all three campuses to all students while school is in session."
+    },
+    {
+        "name": "Resource Center",
+        "building": 4,
+        "room": 104,
+        "phone": "360-475-6817",
+        "hours": "M-F: 8:00am - 4:30pm",
+        "email": "resourcecenter@olympic.edu",
+        "category": ["Food", "Financial Assistance", "Student Life"],
+        "description": "At the Olympic College Resource Center, we offer information and referrals, supportive listening, classroom items like our huge book lending library, and when applicable, emergency funding to help support your needs. This program was created by students for students."
+    },
+    {
+        "name": "Residence Hall",
+        "building": 16,
+        "room": 1,
+        "phone": "360-479-0840",
+        "hours": "M-F: 8:00am - 4:30pm",
+        "email": "reslife@olympic.edu",
+        "category": ["Housing"],
+        "description": "Our Residence Hall provides students with affordable, comfortable and safe housing and many enriching activities. Students become part of a tight-knit community that supports them throughout their college experience."
+    },
+    {
+        "name": "Student Disability Services",
+        "building": 4,
+        "room": 205,
+        "phone": "360-475-7540",
+        "hours": "M-Th: 8:00am - 4:30pm, Fri: By Appointment",
+        "email": "disabilityservices@olympic.edu",
+        "category": ["Disability Services"],
+        "description": "Student Disability Services partners with the Olympic College community to foster a college culture that recognizes disability as a valued aspect of diversity. We coordinate accommodations, auxiliary aids, and support services."
+    },
+    {
+        "name": "Counseling Services",
+        "building": 4,
+        "room": 205,
+        "phone": "360-475-7540",
+        "hours": "Mon-Fri: 8:00am - 4:30pm",
+        "email": "counselingservices@olympic.edu",
+        "category": ["Well-Being"],
+        "description": "Counselors are dedicated to promoting the emotional well-being of students by recognizing individuality, diversity, and the person's inherent ability to manage everyday challenges and achieve life goals."
+    },
+    {
+        "name": "Well-Being and Health Promotion",
+        "building": 10,
+        "room": 111,
+        "phone": "360-475-7645",
+        "hours": "Mon-Fri: 8:00am - 4:30pm",
+        "email": "healthpromotion@olympic.edu",
+        "category": ["Well-Being"],
+        "description": "The Office of Well-Being & Health Promotion offers education and support for emotional, mental, and physical health. They host events and activities that help students get connected and engaged."
+    },
+    {
+        "name": "Campus Security",
+        "building": 4,
+        "room": 100,
+        "phone": "360-475-7800",
+        "hours": "Bremerton: 24/7; Poulsbo: Mon–Thu 7am–9pm, Fri 7am–5pm; Shelton: Mon–Thu 7am–9pm, Fri 7am–5pm",
+        "email": "security@olympic.edu",
+        "category": ["Security"],
+        "description": "Campus Safety & Security is committed to providing a safe, welcoming environment for all. Available 24/7."
+    },
+    {
+        "name": "Sophia Bremer Early Learning Academy",
+        "building": 4,
+        "room": 100,
+        "phone": "360-475-7800",
+        "hours": "Mon-Fri: 7:30am - 4:00pm",
+        "email": "sbela@olympic.edu",
+        "category": ["Childcare"],
+        "description": "The Sophia Bremer Early Learning Academy empowers families and students by nurturing respectful relationships and providing guidance and support to young children and future educators."
+    },
+    {
+        "name": "IT Help Desk",
+        "building": 5,
+        "room": 216,
+        "phone": "360-475-7600",
+        "hours": "Mon-Fri: 8:00am - 5:30pm",
+        "email": "helpdesk@olympic.edu",
+        "category": ["Technology"],
+        "description": "The IT Help Desk supports the technology needs of Olympic College students, providing devices, connectivity, and technical assistance."
+    },
+    {
+        "name": "Multicultural Services",
+        "building": 10,
+        "room": 118,
+        "phone": "360-475-7680",
+        "hours": "Mon-Fri: 8:00am - 4:30pm",
+        "email": "multicultural@olympic.edu",
+        "category": ["Student Life", "Well-Being"],
+        "description": "The Multicultural Center fosters a welcoming, equitable, and inclusive environment that builds strong connections and empowers students to become agents of positive change."
+    }
+]
