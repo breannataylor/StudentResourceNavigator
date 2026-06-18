@@ -1,6 +1,6 @@
 # Student Resource Navigator
 ## Credits
-**Developer:** BreAnna  
+**Developer:** BreAnna Taylor
 **Course:** CIS141
 
 ## Overview
@@ -23,7 +23,7 @@ Students can also build a **custom list of resources**. This list can be viewed,
 ---
 ## To Run
 - In terminal, enter StudentSchoolNavigator folder
-- run `mvn clean compile exec:java`
+- run `mvn exec:java`
 ---
 
 ## JSON Data Structure
@@ -71,17 +71,16 @@ Each resource in the JSON file follows this structure:
 - Small typos or mismatched category names in the JSON caused filtering to fail in ways that weren’t obvious. I standardized the data and updated the filtering logic to support multi‑category resources.
 
 ---
-### Future Endeavors
+### Planned Development
 - Adding more resources
 - Printing saved resource list directly from program instead of saving it as a text file
-- Allowing users to add resouces directly from Resource list instead of from filtered list
+- Allowing users to add resouces directly from Resource list instead of from filtered list 
 
 ### Works Cited: 
-https://www.geeksforgeeks.org/java/filewriter-class-in-java/
-https://docs.oracle.com/javase/8/docs/api/java/io/File.html
-https://docs.oracle.com/javase/tutorial/essential/environment/sysprop.html
-https://www.baeldung.com/jackson-object-mapper-tutorial
-
+Oracle. (n.d.). File (Java Platform SE 8). Oracle Documentation. https://docs.oracle.com/javase/8/docs/api/java/io/File.html
+Oracle. (n.d.). System properties. The Java™ Tutorials. https://docs.oracle.com/javase/tutorial/essential/environment/sysprop.html
+Avramović, S. (2025, December 9). Intro to the Jackson ObjectMapper. Baeldung. https://www.baeldung.com/jackson-object-mapper-tutorial
+GeeksforGeeks. (2025, November 4). Java FileWriter class in Java. GeeksforGeeks. https://www.geeksforgeeks.org/java/filewriter-class-in-java/
 
 ### Image Accreditation
 asciiart.eu — “Untitled” by Hayley Jane Wakenshaw (Flump)
