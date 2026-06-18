@@ -2,6 +2,7 @@
 ## Credits
 **Developer:** BreAnna Taylor
 **Course:** CIS141
+**GitHub Repository:** https://github.com/breannataylor/StudentResourceNavigator
 
 ## Overview
 The **Student Resource Navigator** is a Java‑based console application designed to help Olympic College students locate campus resources. The program loads resource data from a structured JSON file and provides an interactive menu that allows users to filter resources by **category**, **building**, or **name**. Each resource includes details such as location, hours, contact information, and a description, all displayed in a clean, readable format.
