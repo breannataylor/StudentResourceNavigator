@@ -71,11 +71,16 @@ Each resource in the JSON file follows this structure:
 **Issues:**
 - Small typos or mismatched category names in the JSON caused filtering to fail in ways that weren’t obvious. I standardized the data and updated the filtering logic to support multi‑category resources.
 
+## Write Once, Run Anywhere
+**Issues:**
+- File structure only accomodated Mac/Linux format. In order to accomodate for Windows syntax (`C:\...\...`), I used `System.getProperty()` to give program the ability to identify user's home directory. 
+
 ---
 ### Planned Development
 - Adding more resources
 - Printing saved resource list directly from program instead of saving it as a text file
 - Allowing users to add resouces directly from Resource list instead of from filtered list 
+- Add abilty to pick folder to save file to
 
 ### Works Cited: 
 Oracle. (n.d.). File (Java Platform SE 8). Oracle Documentation. https://docs.oracle.com/javase/8/docs/api/java/io/File.html
