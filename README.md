@@ -84,3 +84,7 @@ GeeksforGeeks. (2025, November 4). Java FileWriter class in Java. GeeksforGeeks.
 
 ### Image Accreditation
 asciiart.eu — “Untitled” by Hayley Jane Wakenshaw (Flump)
+
+### Licenses
+This project is licensed under the GNU General Public License v3.0.
+See the `license.txt` file for details.
